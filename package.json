@@ -1,6 +1,6 @@
 {
   "name": "builderbook",
-  "version": "2",
+  "version": "2.0.0",
   "license": "MIT",
   "scripts": {
     "dev": "nodemon server/server.js --watch server",
