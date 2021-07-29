@@ -52,8 +52,8 @@ export default function withAuth(
 
       if (homepage && !user) {
         const book = {
-          slug: process.env.BOOK_SLUG,
-          chapterSlug: process.env.BOOK_CHAPTER_SLUG,
+          slug: "how-to-be-a-web-developer",
+          chapterSlug: "introduction",
         };
         
         Router.push(`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=${book.chapterSlug}`, '/');

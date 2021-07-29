@@ -50,8 +50,8 @@ const defaultProps = {
 
 function Header({ user, hideHeader, redirectUrl }) {
   const book = [{
-    slug: process.env.BOOK_SLUG,
-    chapterSlug: process.env.BOOK_CHAPTER_SLUG,
+    slug: "how-to-be-a-web-developer",
+    chapterSlug: "introduction",
   }];
 
   return (
