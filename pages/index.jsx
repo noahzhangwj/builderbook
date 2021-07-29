@@ -49,4 +49,4 @@ class Index extends React.Component {
 Index.propTypes = propTypes;
 Index.defaultProps = defaultProps;
 
-export default withAuth(Index);
+export default withAuth(Index, { loginRequired: false });
