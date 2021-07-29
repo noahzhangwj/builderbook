@@ -84,7 +84,7 @@ function Header({ user, hideHeader, redirectUrl }) {
               </Hidden>
             ) : null}
           </Grid>
-          <Grid item sm={2} xs={3} style={{ textAlign: 'right' }}>
+          <Grid item sm={6} xs={8} style={{ textAlign: 'right' }}>
             <Link
               href={{
                 pathname: '/book',
@@ -97,6 +97,8 @@ function Header({ user, hideHeader, redirectUrl }) {
             >
               <a style={{ margin: '0px 20px 0px auto' }}>Book One : How to be a web developer</a>
             </Link>
+          </Grid>
+          <Grid item sm={2} xs={3} style={{ textAlign: 'right' }}>
             {user ? (
               <div style={{ whiteSpace: ' nowrap' }}>
                 {!user.isAdmin ? (
