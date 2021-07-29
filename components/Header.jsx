@@ -65,7 +65,7 @@ function Header({ user, hideHeader, redirectUrl }) {
     >
       <Toolbar>
         <Grid container direction="row" justify="space-around" alignItems="center">
-          <Grid item sm={8} xs={7} style={{ textAlign: 'left' }}>
+          <Grid item sm={4} xs={3} style={{ textAlign: 'left' }}>
             {!user ? (
               <Link href="/">
                 <Avatar
@@ -87,6 +87,14 @@ function Header({ user, hideHeader, redirectUrl }) {
               </Hidden>
             ) : null}
           </Grid>
+          <Grid item sm={4} xs={4} style={{ textAlign: 'right' }}>
+            <Link
+              as={`/books/${book.slug}/introduction`}
+              href={`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=introduction`}
+            >
+              <a style={{ margin: '0px 20px 0px auto' }}>Book One : How to be a web developer</a>
+            </Link>
+          </Grid>
           <Grid item sm={2} xs={3} style={{ textAlign: 'right' }}>
             {user ? (
               <div style={{ whiteSpace: ' nowrap' }}>
@@ -107,12 +115,6 @@ function Header({ user, hideHeader, redirectUrl }) {
               </div>
             ) : (
             <div>
-              <Link
-                as={`/books/${book.slug}/introduction`}
-                href={`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=introduction`}
-              >
-                <a style={{ margin: '0px 20px 0px auto' }}>Book One : How to be a web developer</a>
-              </Link>
               <Link
                 href={{
                   pathname: '/public/login',
