@@ -50,7 +50,8 @@ const defaultProps = {
 
 function Header({ user, hideHeader, redirectUrl }) {
   const book = {
-    slug:"my-first-book-for-builder-book-applicaiton",
+    slug: "my-first-book-for-builder-book-applicaiton",
+    chapterSlug: "my-first-book-for-builder-book-applicaiton",
   };
   return (
     <div
@@ -79,7 +80,7 @@ function Header({ user, hideHeader, redirectUrl }) {
           <Grid item sm={4} xs={4} style={{ textAlign: 'right' }}>
             <Link
               as={`/books/${book.slug}/introduction`}
-              href={`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=introduction`}
+              href={`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=${book.chapterSlug}`}
             >
               <a style={{ margin: '0px 20px 0px auto' }}>Book One : How to be a web developer</a>
             </Link>
