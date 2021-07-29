@@ -16,7 +16,7 @@ const stripeInstance = new Stripe(API_KEY, { apiVersion: '2020-03-02' });
 function getBookPriceId(bookSlug) {
   let priceId;
 
-  if (bookSlug === 'demo-book') {
+  if (bookSlug === 'how-to-be-a-web-developer') {
     priceId = dev
       ? process.env.STRIPE_TEST_DEMO_BOOK_PRICE_ID
       : process.env.STRIPE_LIVE_DEMO_BOOK_PRICE_ID;
