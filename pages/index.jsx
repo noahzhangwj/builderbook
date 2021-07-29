@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import withAuth from '../lib/withAuth';
 
