@@ -49,6 +49,9 @@ const defaultProps = {
 };
 
 function Header({ user, hideHeader, redirectUrl }) {
+  const book = {
+    slug:"my-first-book-for-builder-book-applicaiton",
+  };
   return (
     <div
       style={{
@@ -105,14 +108,8 @@ function Header({ user, hideHeader, redirectUrl }) {
             ) : (
             <div>
               <Link
-                href={{
-                  pathname: '/book',
-                  query: { },
-                }}
-                as={{
-                  pathname: '/public/read-chapter?bookSlug=my-first-book-for-builder-book-applicaiton&chapterSlug=introduction',
-                  query: { },
-                }}
+                as={`/books/${book.slug}/introduction`}
+                href={`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=introduction`}
               >
                 <a style={{ margin: '0px 20px 0px auto' }}>Book One : How to be a web developer</a>
               </Link>
