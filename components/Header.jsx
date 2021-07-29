@@ -84,20 +84,6 @@ function Header({ user, hideHeader, redirectUrl }) {
               </Hidden>
             ) : null}
           </Grid>
-          <Grid item sm={4} xs={6} style={{ textAlign: 'right' }}>
-            <Link
-              href={{
-                pathname: '/book',
-                query: { },
-              }}
-              as={{
-                pathname: '/',
-                query: { },
-              }}
-            >
-              <a style={{ margin: '0px 20px 0px auto' }}>Book One : How to be a web developer</a>
-            </Link>
-          </Grid>
           <Grid item sm={2} xs={3} style={{ textAlign: 'right' }}>
             {user ? (
               <div style={{ whiteSpace: ' nowrap' }}>
@@ -117,6 +103,18 @@ function Header({ user, hideHeader, redirectUrl }) {
                 ) : null}
               </div>
             ) : (
+              <Link
+                href={{
+                  pathname: '/book',
+                  query: { },
+                }}
+                as={{
+                  pathname: '/public/read-chapter?bookSlug=my-first-book-for-builder-book-applicaiton&chapterSlug=introduction',
+                  query: { },
+                }}
+              >
+                <a style={{ margin: '0px 20px 0px auto' }}>Book One : How to be a web developer</a>
+              </Link>
               <Link
                 href={{
                   pathname: '/public/login',
