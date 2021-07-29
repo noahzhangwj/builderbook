@@ -80,7 +80,7 @@ function Header({ user, hideHeader, redirectUrl }) {
           </Grid>
           <Grid item sm={4} xs={4} style={{ textAlign: 'right' }}>
             <Link
-              as={`/books/${book[0].slug}/introduction`}
+              as={`/`}
               href={`/public/read-chapter?bookSlug=${book[0].slug}&chapterSlug=${book[0].chapterSlug}`}
             >
               <a style={{ margin: '0px 20px 0px auto' }}>Book#1 How to be a web developer</a>
