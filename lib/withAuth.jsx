@@ -50,6 +50,15 @@ export default function withAuth(
         globalUser = user;
       }
 
+      if (homepage && !user) {
+        const book = {
+          slug: "how-to-be-a-web-developer",
+          chapterSlug: "my-first-book-for-builder-book-applicaiton",
+        };
+        
+        Router.push(`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=${book.chapterSlug}`, '/');
+      }
+
       if (loginRequired && !logoutRequired && !user) {
         Router.push('/public/login', '/login');
         return;
@@ -62,15 +71,7 @@ export default function withAuth(
       if (logoutRequired && user) {
         Router.push('/');
       }
-      
-      if (homepage && !user) {
-        const book = {
-          slug: "how-to-be-a-web-developer",
-          chapterSlug: "my-first-book-for-builder-book-applicaiton",
-        };
-        
-        Router.push(`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=${book.chapterSlug}`, '/');
-      }
+
     }
 
     render() {
