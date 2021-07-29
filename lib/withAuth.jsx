@@ -53,7 +53,7 @@ export default function withAuth(
       if (homepage && !user) {
         const book = {
           slug: "how-to-be-a-web-developer",
-          chapterSlug: "my-first-book-for-builder-book-applicaiton",
+          chapterSlug: "Introduction",
         };
         
         Router.push(`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=${book.chapterSlug}`, '/');
