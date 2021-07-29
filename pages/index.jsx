@@ -55,7 +55,7 @@ class Index extends React.Component {
             Redirecting...
           </div>
         )
-    }<div>);
+    }</div>);
   }
 }
 
