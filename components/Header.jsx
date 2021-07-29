@@ -103,6 +103,7 @@ function Header({ user, hideHeader, redirectUrl }) {
                 ) : null}
               </div>
             ) : (
+            <div>
               <Link
                 href={{
                   pathname: '/book',
@@ -127,6 +128,7 @@ function Header({ user, hideHeader, redirectUrl }) {
               >
                 <a style={{ margin: '0px 20px 0px auto' }}>Log in</a>
               </Link>
+            </div>
             )}
           </Grid>
         </Grid>
