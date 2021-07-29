@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Router from 'next/link';
 
-import withAuth from '../lib/withAuth';
+// import withAuth from '../lib/withAuth';
 
 const propTypes = {
   user: PropTypes.shape({
@@ -49,4 +49,4 @@ class Index extends React.Component {
 Index.propTypes = propTypes;
 Index.defaultProps = defaultProps;
 
-export default withAuth(Index, { loginRequired: false });
+export default Index;
