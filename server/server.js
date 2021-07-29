@@ -36,6 +36,7 @@ const ROOT_URL = getRootUrl();
 const URL_MAP = {
   '/login': '/public/login',
   '/my-books': '/customer/my-books',
+  '/': '/public/read-chapter',
 };
 
 const app = next({ dev });
