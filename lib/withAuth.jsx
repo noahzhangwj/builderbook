@@ -23,7 +23,7 @@ let globalUser = null;
 
 export default function withAuth(
   BaseComponent,
-  { loginRequired = true, logoutRequired = false, adminRequired = false } = {},
+  { loginRequired = true, logoutRequired = false, adminRequired = false, homepage = false } = {},
 ) {
   class App extends React.Component {
     static async getInitialProps(ctx) {
@@ -61,6 +61,15 @@ export default function withAuth(
 
       if (logoutRequired && user) {
         Router.push('/');
+      }
+      
+      if (homepage && !user) {
+        const book = {
+          slug: "how-to-be-a-web-developer",
+          chapterSlug: "my-first-book-for-builder-book-applicaiton",
+        };
+        
+        Router.push(`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=${book.chapterSlug}`, '/');
       }
     }
 
