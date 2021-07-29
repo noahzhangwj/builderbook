@@ -38,6 +38,7 @@ const URL_MAP = {
   '/my-books': '/customer/my-books',
 };
 
+
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
