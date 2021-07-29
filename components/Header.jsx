@@ -76,6 +76,14 @@ function Header({ user, hideHeader, redirectUrl }) {
               </Link>
             ) : null}
           </Grid>
+          <Grid item sm={4} xs={4} style={{ textAlign: 'right' }}>
+            <Link
+              as={`/books/${book.slug}/introduction`}
+              href={`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=introduction`}
+            >
+              <a style={{ margin: '0px 20px 0px auto' }}>Book One : How to be a web developer</a>
+            </Link>
+          </Grid>
           <Grid item sm={2} xs={2} style={{ textAlign: 'right' }}>
             {user && user.isAdmin && !user.isGithubConnected ? (
               <Hidden smDown>
@@ -86,14 +94,6 @@ function Header({ user, hideHeader, redirectUrl }) {
                 </a>
               </Hidden>
             ) : null}
-          </Grid>
-          <Grid item sm={4} xs={4} style={{ textAlign: 'right' }}>
-            <Link
-              as={`/books/${book.slug}/introduction`}
-              href={`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=introduction`}
-            >
-              <a style={{ margin: '0px 20px 0px auto' }}>Book One : How to be a web developer</a>
-            </Link>
           </Grid>
           <Grid item sm={2} xs={3} style={{ textAlign: 'right' }}>
             {user ? (
