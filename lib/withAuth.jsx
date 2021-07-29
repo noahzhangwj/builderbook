@@ -57,6 +57,7 @@ export default function withAuth(
         };
         
         Router.push(`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=${book.chapterSlug}`, '/');
+        return;
       }
 
       if (loginRequired && !logoutRequired && !user) {
