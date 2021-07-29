@@ -84,7 +84,7 @@ function Header({ user, hideHeader, redirectUrl }) {
               </Hidden>
             ) : null}
           </Grid>
-          <Grid item sm={6} xs={8} style={{ textAlign: 'right' }}>
+          <Grid item sm={4} xs={6} style={{ textAlign: 'right' }}>
             <Link
               href={{
                 pathname: '/book',
