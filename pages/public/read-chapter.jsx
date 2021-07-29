@@ -225,7 +225,7 @@ class ReadChapter extends React.Component {
           {chapter.order > 1 ? `Chapter ${chapter.order - 1}: ` : null}
           {chapter.title} 
         </h2>
-        {chapter.isDianYa?<div style={{color:'#FFC0CB'}}>DianYa is great</div>:''}
+        {chapter.isDianYa ? (<div style={{color:'#FFC0CB'}}><h2>DianYa is great</h2></div>) : ''}
         {!chapter.isPurchased && !chapter.isFree ? (
           <BuyButton user={user} book={book} redirectToCheckout={redirectToCheckout} />
         ) : null}
