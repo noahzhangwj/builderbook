@@ -49,10 +49,11 @@ const defaultProps = {
 };
 
 function Header({ user, hideHeader, redirectUrl }) {
-  const book = {
-    slug: "my-first-book-for-builder-book-applicaiton",
+  const book = [{
+    slug: "how-to-be-a-web-developer",
     chapterSlug: "my-first-book-for-builder-book-applicaiton",
-  };
+  }];
+
   return (
     <div
       style={{
@@ -79,10 +80,10 @@ function Header({ user, hideHeader, redirectUrl }) {
           </Grid>
           <Grid item sm={4} xs={4} style={{ textAlign: 'right' }}>
             <Link
-              as={`/books/${book.slug}/introduction`}
-              href={`/public/read-chapter?bookSlug=${book.slug}&chapterSlug=${book.chapterSlug}`}
+              as={`/books/${book[0].slug}/introduction`}
+              href={`/public/read-chapter?bookSlug=${book[0].slug}&chapterSlug=${book[0].chapterSlug}`}
             >
-              <a style={{ margin: '0px 20px 0px auto' }}>Book One : How to be a web developer</a>
+              <a style={{ margin: '0px 20px 0px auto' }}>Book#1 How to be a web developer</a>
             </Link>
           </Grid>
           <Grid item sm={2} xs={2} style={{ textAlign: 'right' }}>
