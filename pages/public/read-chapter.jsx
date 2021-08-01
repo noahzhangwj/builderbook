@@ -63,7 +63,7 @@ class ReadChapter extends React.Component {
     }
 
     this.state = {
-      showTOC: false,
+      showTOC: true,
       chapter,
       htmlContent,
       hideHeader: false,
